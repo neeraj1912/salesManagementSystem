@@ -494,8 +494,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-  background: var(--primary-subtle);
-  cursor: pointer;
+  background: var(--bg-hover);
 }
 
 tbody tr:last-child {
