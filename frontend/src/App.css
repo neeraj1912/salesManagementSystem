@@ -566,12 +566,48 @@ tbody td {
 }
 
 @media (max-width: 768px) {
-  .app-header {
-    padding: 1.5rem 1rem;
+  .app-header-glass {
+    padding: 1rem;
   }
-  
-  .app-header h1 {
-    font-size: 1.5rem;
+
+  .header-container {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .brand-section {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .brand-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .header-center {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+  }
+
+  .header-stats-group {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .header-stat-item .stat-value {
+    font-size: 1rem;
+  }
+
+  .header-actions-group {
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+    padding-top: 0.5rem;
   }
   
   .table-card {
