@@ -13,6 +13,11 @@ export const useSalesData = () => {
     const [page, setPage] = useState(1);
 
     const [options, setOptions] = useState({});
+    const [refreshTrigger, setRefreshTrigger] = useState(0);
+
+    const refresh = () => {
+        setRefreshTrigger(prev => prev + 1);
+    };
 
     useEffect(() => {
         getOptionsHelper()
@@ -53,7 +58,7 @@ export const useSalesData = () => {
 
         const timeout = setTimeout(fetchSales, 300);
         return () => clearTimeout(timeout);
-    }, [search, filters, sortBy, page]);
+    }, [search, filters, sortBy, page, refreshTrigger]);
 
     return {
         data,
@@ -67,7 +72,9 @@ export const useSalesData = () => {
         setFilters,
         sortBy,
         setSortBy,
+        setSortBy,
         page,
-        setPage
+        setPage,
+        refresh
     };
 };

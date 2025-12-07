@@ -113,13 +113,19 @@ const getSales = (req, res) => {
         const totalItems = filteredData.length;
         const totalPages = Math.ceil(totalItems / limitInt);
 
+        // Calculate Total Revenue
+        const totalRevenue = filteredData.reduce((sum, item) => {
+            return sum + (parseFloat(item['Total Amount']) || 0);
+        }, 0);
+
         res.json({
             data: paginatedData,
             meta: {
                 totalItems,
                 totalPages,
                 currentPage: pageInt,
-                pageSize: limitInt
+                pageSize: limitInt,
+                totalRevenue
             }
         });
 
