@@ -58,7 +58,5 @@ Server-side pagination with a default page size of 10. Metadata (totalPages, tot
    App runs on http://localhost:5173.
 
 ## Live Application URL
-[Link to Live App] (Not deployed)
+https://sales-management-system-kjto-oulbmeh3g.vercel.app/
 
-## GitHub Repository
-[Link to Repo] (Local)
