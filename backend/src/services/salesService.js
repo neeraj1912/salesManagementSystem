@@ -1,13 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-
-const dataPath = path.join(__dirname, '../data/sales_data.json');
-
 // Load data into memory
 let salesData = [];
 try {
-    const rawData = fs.readFileSync(dataPath, 'utf-8');
-    salesData = JSON.parse(rawData);
+    salesData = require('../data/sales_data.json');
 } catch (error) {
     console.error('Error loading sales data:', error.message);
     salesData = [];
